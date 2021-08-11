@@ -49,16 +49,16 @@ header{
     width: 50%;
     height: auto;
     margin: auto;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     background-color: black;
     border-right: solid;
 }
 
 .cpRight{
     width: 50%;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
     margin-top: auto;
     margin-bottom: auto;
     height: auto;
