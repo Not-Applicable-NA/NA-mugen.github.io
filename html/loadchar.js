@@ -168,13 +168,13 @@ const charDataList = [
         "charName": "※名称未定",
         "rank": "狂",
         "state": "制作中",
-        "smallPortrait": "../img/chars/_NoName1/portrait_S.png",
-        "largePortrait": "../img/chars/_NoName1/portrait_L.png",
+        "smallPortrait": "../img/chars/NoName1/portrait_S.png",
+        "largePortrait": "../img/chars/NoName1/portrait_L.png",
         "description": "特に何も考えず勢いだけで作ってるドナ改変。<br>思いついた技をただひたすらに詰め込んでる。<br>行き当たりばったり改変。",
         "detail": [
             {
                 "palNo": 1,
-                "sprite": "../img/chars/_NoName1/sprite.gif",
+                "sprite": "../img/chars/NoName1/sprite.gif",
                 "frontExplods":[
                 ],
                 "backExplods":[
@@ -189,13 +189,13 @@ const charDataList = [
         "charName": "※名称未定",
         "rank": "狂？",
         "state": "制作中",
-        "smallPortrait": "../img/chars/_NoName2/portrait_S.png",
-        "largePortrait": "../img/chars/_NoName2/portrait_L.png",
+        "smallPortrait": "../img/chars/NoName2/portrait_S.png",
+        "largePortrait": "../img/chars/NoName2/portrait_L.png",
         "description": "カーネルの杖。<br>カーネル改変をしようとして作っているやつ。<br>ただ、改変元の作者が改変を禁じているので、<br>パッチとして制作中。",
         "detail": [
             {
                 "palNo": 1,
-                "sprite": "../img/chars/_NoName2/sprite.png",
+                "sprite": "../img/chars/NoName2/sprite.png",
                 "frontExplods":[
                 ],
                 "backExplods":[
