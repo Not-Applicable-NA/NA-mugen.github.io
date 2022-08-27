@@ -1,0 +1,501 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+body{
+    display: block;
+    margin: 0 auto;
+    background: #000000;
+    user-select:none;
+}
+/*---------------------------
+        #loading
+---------------------------*/
+body #loading{
+    background: #111111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+body #loading img{
+    animation: rotate 0.5s linear infinite;
+    margin: 10px;
+}
+body #loading p{
+    text-shadow: 0 0 6px #44FF44;
+    font-size: 20px;
+}
+@keyframes rotate {
+    0%  {transform: rotate(0);}
+    100%  {transform: rotate(360deg);}
+}
+body .loadscr-fadeout{
+    animation: fadeout 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+/*---------------------------
+        #header
+---------------------------*/
+body #header{
+    width: 100%;
+    height: 500px;
+    background: #111111;
+    position: relative;
+    border-bottom: solid 3px #44FF44;
+}
+body #header #header_background{
+    width: 100%;
+    height: 100%;
+}
+body #header #header_background #particles-js{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+body #header #header_background #header_image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+body #header #header_background #header_bg_gradient{
+    width: 40%;
+    height: 100%;
+    position: relative;
+}
+body #header #header_background #header_bg_gradient::after{
+    position: absolute;
+    content: "";
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(17, 17, 17, 0) 50%, rgba(17, 17, 17, 1));
+}
+body #header #header_background #header_image #header_img_gradient{
+    width: 60%;
+    height: 100%;
+    position: relative;
+    background: #111111;
+}
+body #header #header_background #header_image #header_img_gradient img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 1;
+}
+body #header #header_background #header_image #header_img_gradient::after{
+    position: absolute;
+    content: "";
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(17, 17, 17, 0), rgba(17, 17, 17, 1) 95%);
+}
+body #header #header_text{
+    position: absolute;
+    padding-left: 50px;
+    top: 300px;
+    z-index: 2;
+    color: #FFFFFF;
+    font-family: "DotGothic16", sans-serif;
+    text-shadow: 0 0 6px #44FF44;
+}
+body #header #header_text h1{
+    font-size: 40px;
+    font-weight: 500;
+    width: 320px;
+    border-bottom: solid 3px #44FF44;
+}
+
+/*---------------------------
+        #container
+---------------------------*/
+body #container{
+    width: 100%;
+}
+/*---#profile---*/
+body #container #profile{
+    height: 500px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #1A1A1A;
+    display: flex;
+    color: #FFFFFF;
+}
+body #container #profile #profile_text{
+    width: 50%;
+    text-align: center;
+}
+body #container #profile #profile_text h1{
+    margin: 70px 150px;
+    font-size: 40px;
+    border-bottom: solid 3px #44FF44;
+}
+body #container #profile #profile_text p{
+    margin: 50px;
+    line-height: 40px;
+    font-size: 20px;
+}
+body #container #profile #profile_image{
+    width: 50%;
+    padding: 20px 0;
+}
+body #container #profile #profile_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/*---#products---*/
+body #container #products{
+    height: 800px;
+    padding: 20px 50px;
+    background: #2A2A2A;
+    color: #FFFFFF;
+}
+body #container #products #products_new,
+body #container #products #products_old{
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 50%;
+    display: flex;
+    text-align: center;
+}
+body #container #products .products_left,
+body #container #products .products_right{
+    width: 50%;
+    padding: 30px 0;
+}
+body #container #products .products_left h1,
+body #container #products .products_right h1{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 80px;
+    font-size: 40px;
+    border-bottom: solid 3px #44FF44;
+}
+body #container #products .products_left p,
+body #container #products .products_right p{
+    width: 70%;
+    margin: 20px auto;
+    font-size: 20px;
+    line-height: 40px;
+}
+body #container #products .products_img_wrapper{
+    max-width: 500px;
+    height: 100%;
+    margin: 0 auto;
+    border: solid 3px #44FF44;
+    background: #000000;
+    filter: drop-shadow(0 0 0.75rem #44FF44);
+    overflow: hidden;
+    cursor: pointer;
+}
+body #container #products .products_img_wrapper img{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    object-fit: fill;
+    transition: transform .4s ease, opacity .4s ease;
+    position: relative;
+}
+body #container #products .products_img_wrapper:hover img{
+    transform: scale(1.1);
+    opacity: 0.3;
+}
+body #container #products .products_img_wrapper p{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    margin: auto;
+    transition: opacity .4s ease;
+    opacity: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+body #container #products .products_img_wrapper:hover p{
+    transition: opacity .4s ease;
+    opacity: 1;
+}
+
+/*---#links---*/
+body #container #links{
+    height: 600px;
+    padding: 20px;
+    background: #3A3A3A;
+    color: #FFFFFF;
+}
+body #container #links #links_text{
+    height: 10%;
+    text-align: center;
+}
+body #container #links #links_text h1{
+    font-size: 40px;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-bottom: solid 3px #44FF44;
+}
+body #container #links #links_link{
+    max-width: 1500px;
+    height: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+body #container #links #links_link > div{
+    width : calc(100% / 3) ;
+    height: 100%;
+    padding: 10px 20px;
+}
+body #container #links #links_link p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+body #container #links #links_link #youtube iframe{
+    width: 100%;
+    height: 320px; 
+    filter: drop-shadow(0 0 0.75rem #44FF44);
+}
+body #container #links #links_link #blog #blog_img_wrapper{
+    width: 100%;
+    height: 320px; 
+    filter: drop-shadow(0 0 0.75rem #44FF44);
+    background: #000000;
+}
+body #container #links #links_link #blog #blog_img_wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+body #container #links #links_link #blog #blog_img_wrapper:hover img{
+    opacity: 0.5;
+}
+body #container #links #links_link #twitter iframe{
+    filter: drop-shadow(0 0 0.75rem #44FF44);
+}
+
+/*---------------------------
+        #footer
+---------------------------*/
+body #footer{
+    height: 70px;
+    padding: 10px;
+    text-align: center;
+    background: #000000;
+    color: #FFFFFF;
+    margin: 0 auto;
+}
+body #footer p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*---------------------------
+        1280px以下用記述
+---------------------------*/
+@media screen and (max-width: 1280px) {
+    body #container #links #links_link #youtube iframe{
+        height: 240px; 
+    }
+    body #container #links #links_link #blog #blog_img_wrapper{
+        height: 240px; 
+    }
+}
+/*---------------------------
+        1150px以下用記述
+---------------------------*/
+@media screen and (max-width: 1150px) {
+    body #container #profile #profile_text h1{
+        margin: 70px 100px;
+    }
+    body #container #profile #profile_text p{
+        margin: 0 auto;
+        line-height: 40px;
+        font-size: 18px;
+    }
+    body #container #profile #profile_image{
+        width: 50%;
+        padding: 80px 0;
+    }
+}
+/*---------------------------
+        1080px以下用記述
+---------------------------*/
+@media screen and (max-width: 1080px) {
+    body #container #products .products_left h1,
+    body #container #products .products_right h1{
+        width: 50%;
+        font-size: 30px;
+        margin-top: 80px;
+    }
+    body #container #products .products_left > p,
+    body #container #products .products_right > p{
+        width: 70%;
+        margin: 20px auto;
+        font-size: 18px;
+        line-height: 40px;
+    }
+}
+/*---------------------------
+        1000px以下用記述
+---------------------------*/
+@media screen and (max-width: 1000px) {
+    body #container #profile{
+        height: 900px;
+        flex-direction: column;
+        align-items: center;
+    }
+    body #container #profile #profile_text{
+        width: 80%;
+        text-align: center;
+    }
+    body #container #profile #profile_text h1{
+        margin: 70px 100px;
+    }
+    body #container #profile #profile_text p{
+        margin: 0 auto;
+        line-height: 40px;
+        font-size: 18px;
+    }
+    body #container #profile #profile_image{
+        width: 50%;
+        padding: 20px 0;
+    }
+    body #container #products{
+        height: 1200px;
+    }
+    body #container #products #products_new,
+    body #container #products #products_old{
+        width: 100%;
+        height: 46%;
+        align-items: center;
+    }
+    body #container #products #products_new{
+        flex-direction: column-reverse;
+    }
+    body #container #products #products_old{
+        flex-direction: column;
+    }
+    body #container #products .products_left,
+    body #container #products .products_right{
+        width: 100%;
+        font-size: 30px;
+        padding: 0;
+    }
+    body #container #products .products_left h1,
+    body #container #products .products_right h1{
+        margin: 60px auto;
+        font-size: 40px;
+    }
+    body #container #products .products_left > p,
+    body #container #products .products_right > p{
+        display: none;
+    }
+    body #container #links{
+        height: 1500px;
+    }
+    body #container #links #links_text{
+        height: 5%;
+    }
+    body #container #links #links_text h1{
+        width: 60%;
+    }
+    body #container #links #links_link{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    body #container #links #links_link > div{
+        width: 55%;
+        height: 100%;
+        padding: 10px 20px;
+    }
+    body #container #links #links_link #youtube iframe{
+        height: 320px; 
+    }
+    body #container #links #links_link #blog #blog_img_wrapper{
+        height: 320px; 
+    }
+}
+/*---------------------------
+        700px以下用記述
+---------------------------*/
+@media screen and (max-width: 700px) {
+    body #header{
+        height: 300px;
+    }
+    body #header #header_background{
+        opacity: 0.5;
+    }
+    body #header #header_background #header_image{
+        display: none;
+    }
+    body #header #header_text{
+        top: 80px;
+        width: 70%;
+        text-align: center;
+        padding: 0 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    body #header #header_text h1{
+        margin: 0 auto;
+        font-size: 30px;
+    }
+    body #container #profile{
+        height: 670px;
+    }
+    body #container #profile #profile_text{
+        width: 80%;
+    }
+    body #container #profile #profile_text h1{
+        margin: 50px 10px;
+        font-size: 30px;
+    }
+    body #container #profile #profile_text p{
+        line-height: 30px;
+        font-size: 16px;
+    }
+    body #container #products{
+        height: 1000px;
+    }
+    body #container #products .products_left h1,
+    body #container #products .products_right h1{
+        margin: 60px auto;
+        font-size: 25px;
+    }
+    body #container #products .products_img_wrapper{
+        max-width: 400px;
+    }
+    body #container #links #links_text{
+        height: 40px;
+    }
+    body #container #links #links_text h1{
+        width: 70%;
+        font-size: 30px;
+    }
+    body #container #links #links_link > div{
+        width: 90%;
+    }
+}
