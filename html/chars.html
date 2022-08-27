@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="../css/products.css">
+    <script src="./loadchar.js"></script>
+    <title>制作物一覧</title>
+</head>
+<body>
+    <div id="container">
+        <div id="list">
+            <h1>制作物</h1>
+            <div id="chars">
+                <ul id="charList">
+                </ul>
+            </div>
+        </div>
+        <div id="selectChar">
+            <h1>←キャラを選択して詳細表示</h1>
+        </div>
+        <div id="detail" style="display: none;">
+            <div id="detailHead">
+                <div id="detailLeft">
+                </div>
+                <div id="detailRight">
+                    <h1 id="headName">
+                    </h1>
+                    <div id="headRank">
+                        <h1>ランク：</h1>
+                        <h1 id="charRank"></h1>
+                    </div>
+                    <div id="headState">
+                        <h1>状況：</h1>
+                        <h1 id="charState"></h1>
+                    </div>
+                </div>
+            </div>
+            <div id="detailDesc">
+                <div id="sampleImage">
+                    <div id="imageWrapper">
+                        <div id="explodFront">
+                        </div>
+                        <div id="explodBack">
+                        </div>
+                    </div>
+                    <div id="palletArea">
+                        <h2>カラー一覧</h2>
+                        <div id="pallets">
+                            <ul id="palletList">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="detailText">
+                    <h1>説明</h1>
+                </div>
+            </div>
+            <div id="downloadLink">
+                <div id="linkText">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- この時点で必要な要素はすべて読み込まれたので、スクリプトを実行する -->
+    <script src="../js/products.js"></script>
+</body>
+</html>

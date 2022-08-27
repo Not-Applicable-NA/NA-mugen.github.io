@@ -1,0 +1,274 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+body{
+    margin: 0 auto;
+    background: #111111;
+    user-select:none;
+}
+
+/*---------------------------
+        #container
+---------------------------*/
+body #container{
+    display: flex;
+    flex-grow: 1;
+    height: 100vh;
+}
+
+/*---#list---*/
+body #container #list{
+    width: 350px;
+    background: #3A3A3A;
+}
+body #container #list h1{
+    margin: 0;
+    height: 10%;
+    box-sizing: border-box;
+    padding-top: 13px;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: "DotGothic16", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    text-shadow: 0 0 6px #44FF44;
+}
+body #container #list #chars{
+    height: 90%;
+    margin: 0;
+    background: #2A2A2A;
+}
+body #container #list #chars #charList{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    list-style-type: none;
+}
+body #container #list #chars #charList::-webkit-scrollbar{
+    width: 10px;
+    background-color: #4A4A4A;
+}
+body #container #list #chars #charList::-webkit-scrollbar-thumb{
+    background-color: #7A7A7A;
+}
+body #container #list #chars #charList li .listData{
+    display: flex;
+    height: 65px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+body #container #list #chars #charList li .listData:hover{
+    background: #1A1A1A;
+}
+body #container #list #chars #charList li .listData .charIcon{
+    width: 15%;
+}
+body #container #list #chars #charList li .listData .charIcon img{
+    padding: 20px 0 20px 25px;
+}
+body #container #list #chars #charList li .listData .charName{
+    width: 85%;
+    margin: 0;
+    text-align: center;
+    padding: 20px 0 20px;
+    color: #FFFFFF;
+    text-shadow: 0 0 6px #44FF44;
+}
+
+/*---#selectChar---*/
+body #container #selectChar{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111111;
+    color: #FFFFFF;
+}
+
+/*---#detail---*/
+body #container #detail{
+    flex: 1;
+    background: #1A1A1A;
+}
+body #container #detail #detailHead{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 30vh;
+    display: flex;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+body #container #detail #detailHead #detailLeft{
+    height: 100%;
+    width: 70%;
+}
+body #container #detail #detailHead #detailLeft #largePortrait{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 0.5rem #44FF44);
+}
+body #container #detail #detailHead #detailRight{
+    height: 100%;
+    width: 100%;
+    color: #FFFFFF;
+}
+body #container #detail #detailHead #detailRight #headName{
+    margin: 0;
+    height: calc(100% / 3);
+    padding: 15px 0px;
+    text-shadow: 0 0 6px #44FF44;
+    box-sizing: border-box;
+    text-align: center;
+}
+body #container #detail #detailHead #detailRight #headRank{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% / 3);
+}
+body #container #detail #detailHead #detailRight #headRank h1{
+    margin: 0;
+}
+body #container #detail #detailHead #detailRight #headRank #charRank{
+    color: #FFFF00;
+}
+body #container #detail #detailHead #detailRight #headState{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% / 3);
+}
+body #container #detail #detailHead #detailRight #headState h1{
+    margin: 0;
+}
+body #container #detail #detailHead #detailRight #headState #charState{
+    color: #00FFFF;
+}
+body #container #detail #detailDesc{
+    height: 50vh;
+    display: flex;
+}
+body #container #detail #detailDesc #sampleImage{
+    min-width: 540px;
+    height: 100%;
+}
+body #container #detail #detailDesc #sampleImage #imageWrapper{
+    width: 100%;
+    height: 70%;
+    position: relative;
+    overflow: hidden;
+    background: #0A0A0A;
+    box-sizing: border-box;
+    border: 3px solid #44FF44
+}
+body #container #detail #detailDesc #sampleImage #imageWrapper #backgroundImage{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 0;
+}
+body #container #detail #detailDesc #sampleImage #imageWrapper #sprite{
+    position: absolute;
+    padding: 30px 0 10px 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: contain;
+    box-sizing: border-box;
+    z-index: 2;
+}
+body #container #detail #detailDesc #sampleImage #imageWrapper #explodFront,
+body #container #detail #detailDesc #sampleImage #imageWrapper #explodBack{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+body #container #detail #detailDesc #sampleImage #imageWrapper #explodFront img{
+    position: absolute;
+    right: 0;
+    margin: auto;
+    object-fit: fill;
+    z-index: 3;
+}
+body #container #detail #detailDesc #sampleImage #imageWrapper #explodBack img{
+    position: absolute;
+    right: 0;
+    margin: auto;
+    object-fit: fill;
+    z-index: 1;
+}
+body #container #detail #detailDesc #sampleImage #imageWrapper .transAdd{
+    mix-blend-mode: screen;
+}
+body #container #detail #detailDesc #sampleImage #imageWrapper .transSub{
+    mix-blend-mode: multiply;
+    filter: invert();
+}
+body #container #detail #detailDesc #sampleImage #palletArea{
+    width: 100%;
+    height: 30%;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    background: #2A2A2A;
+    color: #FFFFFF;
+}
+body #container #detail #detailDesc #sampleImage #palletArea h2{
+    margin: 0;
+    height: 30%;
+    text-align: center;
+}
+body #container #detail #detailDesc #sampleImage #palletArea #pallets{
+    margin: 0;
+    height: 70%;
+}
+body #container #detail #detailDesc #sampleImage #palletArea #pallets #palletList{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body #container #detail #detailDesc #sampleImage #palletArea #pallets #palletList li{
+    margin: 10px;
+    text-shadow: 0 0 6px #44FF44;
+    text-decoration:underline;
+    cursor: pointer;
+}
+body #container #detail #detailDesc #detailText{
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+    background: #111111;
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body #container #detail #downloadLink{
+    height: 20vh;
+    display: flex;
+    background: #1A1A1A;
+    justify-content: center;
+    align-items: center;
+}
+body #container #detail #downloadLink #linkText{
+    font-size: 40px;
+}
+body #container #detail #downloadLink #linkText a{
+    color: #FFFFFF;
+    text-shadow: 0 0 6px #44FF44;
+    font-weight: bold;
+}
